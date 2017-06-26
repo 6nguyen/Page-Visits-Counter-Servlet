@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import com.gnguyen.web.clickcounter.dao.ClickDao;
 
-/**
+/** 
  * Servlet implementation class ClickCounter
  */
 @WebServlet("/ClickCounter")
