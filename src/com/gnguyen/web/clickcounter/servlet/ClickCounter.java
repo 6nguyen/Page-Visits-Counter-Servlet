@@ -2,6 +2,7 @@ package com.gnguyen.web.clickcounter.servlet;
 
 import java.io.PrintWriter;
 import java.io.IOException;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,11 +37,13 @@ public class ClickCounter extends HttpServlet {
 		session.setMaxInactiveInterval(3);
 		response.setContentType("text/plain");
 		PrintWriter writer = response.getWriter();
+		Date date = new Date();
 		
 		if (session.isNew()) {
 			count++;
 		}
 		writer.println("Page visits: " + count);
+		writer.println("Date: " + date);
 	}
 
 	@Override
